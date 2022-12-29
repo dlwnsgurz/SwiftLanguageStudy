@@ -3,15 +3,15 @@
 ---
 ## The Basics
 - Constants and Variables
-- Type Annotation
 - Comments
 - Semicolons
-- Integer
-- Type Inference
+- Integers
+- Floating-Point Numbers
+- Type Safety and Type Inference
 - Numeric Literal
 - Numeric Type Conversion
 - Type Alias
 - Booleans
-- Tuple
+- Tuples
 - Optional
 - Error Handling
