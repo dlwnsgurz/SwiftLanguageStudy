@@ -1,7 +1,7 @@
 # SwiftLanguageStudy
-<a href = "https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html">공식문서</a>를 통해 스위프트 문법을 정리한 레포입니다.
+스위프트 <a href = "https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html">공식문서</a>를 통해 스위프트 문법을 정리한 레포입니다.
 ---
-## The Basics
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/The%20Basics.swift">The Basics</a>
 - Constants and Variables
 - Comments
 - Semicolons
