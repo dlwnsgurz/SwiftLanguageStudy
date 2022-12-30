@@ -35,7 +35,6 @@ welcomeMessage = "Hello"
 
 /// 콤마(,) 를 통해 여러 상수나 변수에 대해 타입 지정을 할 수 있다.
 var red, green, blue: Double
-
 /*------------------------------------------*/
 /// - Naming Constants and Variables
 
@@ -278,7 +277,7 @@ let valueString: String = assumedString // 이 경우에는 valueString이 Strin
 
 /*------------------------------------------*/
 
-///- Error Handling
+/// - Error Handling
 ///
 /// swift의 에러 핸들링은 do 구문 내에서 이루어진다.
 /// 따라서, 발생하는 여러 케이스의 에러에 대해 catch문으로 분기하여 개별적으로 처리할 수 있다.
