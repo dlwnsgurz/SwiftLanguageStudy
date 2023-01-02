@@ -16,7 +16,7 @@
 - Optional
 - Error Handling
 --
-## <a href = "https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html">Basic Operator</a>
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Basic%20Operator.swift">Basic Operator</a>
 - Terminology
 - Assign Operator
 - Arithmetic Operators
@@ -27,7 +27,7 @@
 - Range Operators
 - Logical Operators
 --
-## <a href = "https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html">Strings and Characters</a>
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Strings%20and%20Characters.swift">Strings and Characters</a>
 - String Literals
 - Initializing an Empty String
 - String Mutability
