@@ -15,7 +15,29 @@
 - Tuples
 - Optional
 - Error Handling
-
-## <a href =
-    "https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html">Basic Operators</a>
-    
+--
+## <a href = "https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html">Basic Operator</a>
+- Terminology
+- Assign Operator
+- Arithmetic Operators
+- Compound Assignment Operators
+- Comparison Operators
+- Ternary Conditional Operator
+- Nil-Coalescing Operator
+- Range Operators
+- Logical Operators
+--
+## <a href = "https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html">Strings and Characters</a>
+- String Literals
+- Initializing an Empty String
+- String Mutability
+- Strings Are Value Types
+- Working with Characters
+- Concatenating Strings and Characters
+- String Interpolation
+- Unicode
+- Counting Characters
+- Accessing and Modifying a String
+- Substrings
+- Comparing Strings
+- Unicode Representations of Strings
