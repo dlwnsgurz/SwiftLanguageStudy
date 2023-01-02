@@ -15,3 +15,7 @@
 - Tuples
 - Optional
 - Error Handling
+
+## <a href =
+    "https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html">Basic Operators</a>
+    
