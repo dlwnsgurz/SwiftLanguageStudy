@@ -41,3 +41,8 @@
 - Substrings
 - Comparing Strings
 - Unicode Representations of Strings
+--
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Collection%20Types.swiftt">Collection Types</a>
+- Array
+- Set
+- Dictionary
