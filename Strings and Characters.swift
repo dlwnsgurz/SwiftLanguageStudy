@@ -45,15 +45,20 @@ var greeting = #"hello "my name is Lee""#
 let emptyString = ""
 let emptyString2 = String()
 
+/*------------------------------------------*/
+
 /// - String Mutability
 /// 상수로 선언된 문자열은 컴파일 에러가 발생한다.
 let nonMutabilityString = "hello"
 nonMutabilityString += "deer"
 
+/*------------------------------------------*/
 
 /// - Strings are Value Type
 /// 스위프트의 문자열은 값 타입으로 함수나 메소드에 인자로 전달되어 변경된 경우,
 /// 원본의 값은 변하지 않는다.
+
+/*------------------------------------------*/
 
 /// - Working with Character
 /// for - loop 로 문자열을 순회할 수 있다.
@@ -73,6 +78,8 @@ let characterD: Character = "D"
 let characters: [Character] = ["h","e","l","l","o"]
 let greetingString = String(characters)
 
+/*------------------------------------------*/
+
 /// - Concatenating Strings and Characters
 /// String 타입은 + 연산자를 통해 concatenating할 수 있다.
 /// 또한 append() 메소드를 이용해 String, Character 타입의 값을 붙힐 수 있다.
@@ -81,18 +88,26 @@ let tempCharacter: Character = "!"
 helloString.append(tempCharacter)
 helloString.append("!!")
 
+/*------------------------------------------*/
+
 /// - String Interpolation
 /// 만약 문자열 보간법을 사용하고 싶다면, \(값)을 사용하면 된다.
+
+/*------------------------------------------*/
 
 /// - Unicode
 /// 문자열내의 각 문자들은 아스키 코드가 아닌 유니코드이다.
 /// 하나의 문자열은 여러개의 서로다른 유니코드 문자들로 쪼개질 수 있다.
 /// 예) 한글, 국기
 
+/*------------------------------------------*/
+
 /// - Counting Characters
 /// 문자열 내의 문자의 개수는 count 프로퍼티르 얻어낼 수 있다.
 /// 하지만, 유니코드의 특성때문에 문자열 내의 문자의 수를 계산하기 위해서는 반드시 문자열을 순회해야한다.
 /// 따라서, count 프로퍼티는 그 자체로 O(N)의 시간복잡도를 가진다.
+
+/*------------------------------------------*/
 
 /// - Accessing and Modifying a String
 /// 위에 언급했듯이, 스위프트의 문자열은 유니코드의 특성때문에 정수 인덱스로 접근할 수 없다.
@@ -133,11 +148,15 @@ welcome.removeSubrange(range)
 /// RangeReplacableCollection 프로토콜을 따르는 클래스에서 사용할 수 있다.
 /// Array, Dictionary, Set이 그 예다.
 
+/*------------------------------------------*/
+
 /// - Substring
 /// String 타입은 문자열들이 저장되는 메모리가 따로 존재한다.
 /// SubString 타입은 String타입이나, 다른 SubString 타입들이 존재하는 메모리를 재활용한다.
 /// 따라서, Substring을 오래사용하는 경우 String 타입으로 변환해주어야 메모리 손실이 덜 하다.
 /// String과 Substring 은 모두 StringProtocol을 따른다.
+
+/*------------------------------------------*/
 
 /// - Comparing Strings
 /// 스위프트에서 문자열을 비교하는 방법은 3가지이다.
@@ -151,6 +170,8 @@ print(eAcuteQuestion == combinedEAcuteQuestion) // true
 /// 게다가 유니코드 값 까지 다르다. 따라서, 이는 같은 문자가 아니다.
 
 /// 두번째 문자열 비교 방식은 hasPrefix, hasSuffix방식으로 위의 방식과 동일한 로직을 이용한다.
+
+/*------------------------------------------*/
 
 /// - Unicode Representation Of Strings
 /// 문자열 내에 유니코드로 접근할 수 있다.
