@@ -18,6 +18,8 @@ import Foundation
 /// 만약 컬렉션 타입 내의 원소들이 추가, 삭제, 변경의 연산이 필요하다면 변수로 선언해야한다.
 /// 만약  추가,삭제,변경 연산이 필요하지 않다면 상수로 선언해 성능을 높힐 수 있다.
 
+/*------------------------------------------*/
+
 /// - Arrays
 /// 스위프트의 Arrays는 NSArray와 연관이 있다.
 /// Array의 생성자는 2가지이다.
@@ -88,6 +90,8 @@ for (index, name) in names.enumerated(){
     print("\(index+1)th name is \(name)")
 }
 
+/*------------------------------------------*/
+
 /// - Set
 /// 컬렉션 타입 Set은 Array와 다르게 순서가 필요없이, 유일한 값을 가지는 컬렉션 타입이다.
 /// Set타입을 선언하기 위해서는 원소가 반드시 Hashable 프로토콜을 따라야한다.
@@ -143,7 +147,6 @@ for genre in favoriteGenres.sorted(){
     print(genre)
 }
 
-/// - Fundumental Operation
 /// 스위프트 Set은 다양한 집합 연산을 제공한다
 /// 이 다양한 연산들은 동일한 타입의 Set을 리턴한다.
 /// - Note:
@@ -177,6 +180,8 @@ farmAnimals.isSuperset(of: houseAnimals)
 // true
 farmAnimals.isDisjoint(with: cityAnimals)
 // true
+
+/*------------------------------------------*/
 
 /// - Dictionary
 /// 컬렉션 타입인 Dictionary는 Set과 마찬가지로 순서가 상관없는 [키: 값] 쌍의 자료구조이다.
