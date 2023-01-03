@@ -46,3 +46,13 @@
 - Array
 - Set
 - Dictionary
+--
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Control%20Flow.swift">Control Flow</a>
+- For-In Loops
+- While Loops
+- Conditional Statements
+- Control Transfer Statements
+- Early Exit
+- Checking API Availability
+
+
