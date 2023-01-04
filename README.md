@@ -55,4 +55,10 @@
 - Early Exit
 - Checking API Availability
 --
-
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Functions.swift">Function</a>
+- Defining and Calling Functions
+- Function Parameters and Return Values
+- Function Argument Labels and Parameter Names
+- Function Types
+- Nested Functions
+--
