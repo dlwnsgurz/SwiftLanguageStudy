@@ -1,7 +1,18 @@
-let stillAnotherPoint = (9, "a")
-switch stillAnotherPoint {
-case (let distance, "a"), (0, let distance):
-    print("On an axis, \(distance) from the origin")
-default:
-    print("Not on an axis")
+func swapTwoInts(_ a: inout Int, _ b: inout Int){
+    var temp = a
+    a = b
+    b = temp
+}
+
+var someInt1 = 3
+var someInt2 = 7
+swapTwoInts(&someInt1, &someInt2)
+print("\(someInt1), \(someInt2)")
+
+func addTwoInts(_ a: Int, _ b: Int) -> Int{
+    a+b
+}
+
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int{
+    a*b
 }
