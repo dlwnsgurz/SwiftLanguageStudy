@@ -62,3 +62,11 @@
 - Function Types
 - Nested Functions
 ---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Closures.swift">Closures</a>
+- Closure Expressions
+- Trailing Closures
+- Capturing Values
+- Closures Are Reference Types
+- Escaping Closures
+- Autoclosures
+---
