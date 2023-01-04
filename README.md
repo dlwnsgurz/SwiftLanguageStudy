@@ -15,7 +15,7 @@
 - Tuples
 - Optional
 - Error Handling
---
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Basic%20Operator.swift">Basic Operator</a>
 - Terminology
 - Assign Operator
@@ -26,7 +26,7 @@
 - Nil-Coalescing Operator
 - Range Operators
 - Logical Operators
---
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Strings%20and%20Characters.swift">Strings and Characters</a>
 - String Literals
 - Initializing an Empty String
@@ -41,12 +41,12 @@
 - Substrings
 - Comparing Strings
 - Unicode Representations of Strings
---
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Collection%20Types.swift">Collection Types</a>
 - Array
 - Set
 - Dictionary
---
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Control%20Flow.swift">Control Flow</a>
 - For-In Loops
 - While Loops
@@ -54,11 +54,11 @@
 - Control Transfer Statements
 - Early Exit
 - Checking API Availability
---
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Functions.swift">Function</a>
 - Defining and Calling Functions
 - Function Parameters and Return Values
 - Function Argument Labels and Parameter Names
 - Function Types
 - Nested Functions
---
+---
