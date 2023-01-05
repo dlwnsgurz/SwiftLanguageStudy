@@ -70,3 +70,10 @@
 - Escaping Closures
 - Autoclosures
 ---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Enumerations.swift">Enumerations</a>
+- Enumeration Syntax
+- Matching Enumeration Values with a Switch Statement
+- Iterating over Enumeration Cases
+- Associated Values
+- Raw Values
+- Recursive Enumerations
