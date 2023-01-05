@@ -84,6 +84,13 @@ enum Barcode{
 var myBarcode = Barcode.upc(123,412,13,243)
 myBarcode = .qrCode("adnjasndj")
 
+/// 관련값에 이름을 지어줄 수도 있다.
+enum AppleProduct{
+    case IPad(model: String, version: Double)
+    case Mac(model: String, version: Double)
+    case IPhone(model: String, version: String)
+}
+
 /// switch문과 관련값을 이용해 보자.
 switch myBarcode{
 case .upc(a,b,c,d):
