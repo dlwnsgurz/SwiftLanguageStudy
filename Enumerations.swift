@@ -90,6 +90,7 @@ enum AppleProduct{
     case Mac(model: String, version: Double)
     case IPhone(model: String, version: String)
 }
+let a = [1,2,3,4,5]
 
 /// switch문과 관련값을 이용해 보자.
 switch myBarcode{
