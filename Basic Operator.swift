@@ -52,7 +52,7 @@ let b = a += 2 // This isn't Valid
 
 (1, "zebra") < (2, "apple") // true
 (3, "apple") < (3, "bird") // true
-(4, "dog") == (4, "dlog") // true
+(4, "dog") == (4, "dog") // true
 
 /// 만약 튜플에서 서로 다른 타입의 값을 비교하려고 한다면, 에러가 발생한다.
 /// 또한, 비교 연산자가 제공되지 않는 타입에 대해 수행한다면 에러가 발생한다.
@@ -71,7 +71,7 @@ let b = a += 2 // This isn't Valid
 
 let contentHeight = 40
 let hasHeader = true
-let rowHeight = contentHeight + (hasHeader? 50 : 20)
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
 /*------------------------------------------*/
 /// - Nil-Coalescing Operator
@@ -99,7 +99,7 @@ for index in 1...5{
 /// 두번쨰는 반개방 범위 연산자이다.
 let members = ["Anna", "Alex", "Brian", "Jack"]
 let count = members.count
-for name in 0..<count{
+for name in member[0..<count]{
     print("Person \(name+1) is called \(member[name])")
 }
 
@@ -132,6 +132,7 @@ range.contains(-3) // true
 range.contains(4) // true
 
 /*------------------------------------------*/
+
 /// - Logical Operator
 
 /// 논리 연산자는 Boolean Value에 대해서만 사용이 가능하다.
