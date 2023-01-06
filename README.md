@@ -77,3 +77,9 @@
 - Associated Values
 - Raw Values
 - Recursive Enumerations
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Structures%20and%20Classes.swift">Structures And Classes</a>
+- Comparing Structures and Classes
+- Structures and Enumerations Are Value Types
+- Classes Are Reference Types
+
