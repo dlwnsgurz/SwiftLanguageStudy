@@ -82,4 +82,11 @@
 - Comparing Structures and Classes
 - Structures and Enumerations Are Value Types
 - Classes Are Reference Types
-
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Properties.swift">Structures And Properties</a>
+- Stored Properties
+- Computed Properties
+- Property Observers
+- Property Wrappers
+- Global and Local Variables
+- Type Properties
