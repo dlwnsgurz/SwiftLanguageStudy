@@ -90,3 +90,7 @@
 - Property Wrappers
 - Global and Local Variables
 - Type Properties
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Methods.swift">Methods</a>
+- Instance Methods
+- Type Methods
