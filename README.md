@@ -94,3 +94,8 @@
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Methods.swift">Methods</a>
 - Instance Methods
 - Type Methods
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Subscripts.swift">Subscripts</a>
+- Subscript Syntax
+- Subscript Usage
+- Type Subscripts
