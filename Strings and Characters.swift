@@ -9,9 +9,6 @@ import Foundation
 
 // - Topic : Strings and Characters
 ///
-///
-///
-
 /// - Strings Literals
 ///
 /// String 타입의 리터럴은 큰 따옴표 ("")로 감싸서 표현할 수 있다.
@@ -26,7 +23,7 @@ let multilineStringLiteral = """
 /// 만약 줄 바꿈 없이 만들려면? \ 를 이용하면 된다.
 let mulitilineStringLiteral2 = """
     Hello My Name Is LEE \
-    I'm Living in Seoul
+    I'm Living in Seoul \
     
     Thank You.
 """
@@ -40,7 +37,6 @@ let sparklingHeart = "\u{1F496}"
 /// 만약 문자열 내의 특수 리터럴 문자들 효과를 적용하기 싫다면 ""를 #문자로 감싸면 된다.
 var greeting = #"hello "my name is Lee""#
 
-/// - Initializing an Empty String
 /// 빈 문자열을 만드는 방법은 2가지이며, 둘은 동일한 문자열을 갖는다.
 let emptyString = ""
 let emptyString2 = String()
@@ -48,7 +44,7 @@ let emptyString2 = String()
 /*------------------------------------------*/
 
 /// - String Mutability
-/// 상수로 선언된 문자열은 컴파일 에러가 발생한다.
+/// 상수로 선언된 문자열은 문자열 연산시 컴파일 에러가 발생한다.
 let nonMutabilityString = "hello"
 nonMutabilityString += "deer"
 

@@ -1,5 +1,34 @@
-let members = ["Anna", "Alex", "Brian", "Jack"]
-let count = members.count
-for name in 0..<count{
-    print("Person \(name+1) is called \(member[name])")
+//class AudioChannel{
+//    static let thresholdLevel = 10
+//    static var maximumChannelLevel = 0
+//    var currentLevel: Int{
+//        get{ currentLevel}
+//        set{
+//            if currentLevel > AudioChannel.thresholdLevel{
+//                currentLevel = AudioChannel.thresholdLevel
+//            }
+//            if currentLevel > AudioChannel.maximumChannelLevel{
+//                AudioChannel.maximumChannelLevel = currentLevel
+//            }
+//        }
+//
+//    }
+//
+//}
+
+class AudioChannel{
+    static let thresholdLevel = 10
+    static var maximumChannelLevel = 0
+    var currentLevel: Int = 0{
+        didSet{
+            if currentLevel > AudioChannel.thresholdLevel{
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maximumChannelLevel{
+                AudioChannel.maximumChannelLevel = currentLevel
+            }
+        }
+            
+    }
+    
 }
