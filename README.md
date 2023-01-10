@@ -99,3 +99,9 @@
 - Subscript Syntax
 - Subscript Usage
 - Type Subscripts
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Inheritance.swift">Inheritance</a>
+- Defining a Base Class
+- Subclassing
+- Overriding
+- Preventing Overrides
