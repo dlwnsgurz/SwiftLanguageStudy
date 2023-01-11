@@ -128,3 +128,8 @@
 - Accessing Subscripts Through Optional Chaining
 - Linking Multiple Levels of Chaining
 - Chaining on Methods with Optional Return Values
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Error%20Handling.swift">Error Handling</a>
+- Representing and Throwing Errors
+- Handling Errors
+- Specifying Cleanup Actions
