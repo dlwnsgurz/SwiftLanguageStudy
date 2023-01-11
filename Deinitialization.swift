@@ -52,7 +52,7 @@ class Player{
         coinsInPurse += Bank.distribute(coins: coins)
     }
     
-    deinit{
+    deinit?{
         Bank.receive(coins: coinsInPurse)
     }
 }

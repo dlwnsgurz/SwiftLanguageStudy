@@ -115,3 +115,8 @@
 - Failable Initializers
 - Required Initializers
 - Setting a Default Property Value with a Closure or Function
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Deinitialization.swift">Deintialization</a>
+- How Deinitialization Works
+- Deinitializers in Action
+
