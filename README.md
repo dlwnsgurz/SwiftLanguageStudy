@@ -105,3 +105,13 @@
 - Subclassing
 - Overriding
 - Preventing Overrides
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Initialization.swift">Intialization</a>
+- Setting Initial Values for Stored Properties
+- Customizing Initialization
+- Default Initializers
+- Initializer Delegation for Value Types
+- Class Inheritance and Initialization
+- Failable Initializers
+- Required Initializers
+- Setting a Default Property Value with a Closure or Function
