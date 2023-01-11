@@ -119,4 +119,12 @@
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Deinitialization.swift">Deintialization</a>
 - How Deinitialization Works
 - Deinitializers in Action
-
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Optional%20Chaining.swift">Optional Chaining</a>
+- Optional Chaining as an Alternative to Forced Unwrapping
+- Defining Model Classes for Optional Chaining
+- Accessing Properties Through Optional Chaining
+- Calling Methods Through Optional Chaining
+- Accessing Subscripts Through Optional Chaining
+- Linking Multiple Levels of Chaining
+- Chaining on Methods with Optional Return Values
