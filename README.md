@@ -141,3 +141,9 @@
 - Tasks and Task Groups
 - Actors
 - Sendable Types (NaN)
+--- 
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy">Type Casting</a>
+- Defining a Class Hierarchy for Type Casting
+- Checking Type
+- Downcasting
+- Type Casting for Any and AnyObject
