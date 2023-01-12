@@ -211,4 +211,4 @@ serve(customer: { customersInLine.remove(at: 0) } )
 func serve(customer customerProvide: @autoclosure () -> String) {
     print("Now serving \(customerProvider())!")
 }
-serve(customer: customerProvider)
+serve(c)
