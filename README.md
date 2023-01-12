@@ -133,3 +133,11 @@
 - Representing and Throwing Errors
 - Handling Errors
 - Specifying Cleanup Actions
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Concurrency.swift">Concurrency</a>
+- Defining and Calling Asynchronous Functions
+- Asynchronous Sequences
+- Calling Asynchronous Functions in Parallel
+- Tasks and Task Groups
+- Actors
+- Sendable Types (NaN)
