@@ -147,3 +147,7 @@
 - Checking Type
 - Downcasting
 - Type Casting for Any and AnyObject
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Nested%20Types.swift">Nested Types</a>
+- Nested Types in Action
+- Referring to Nested Types
