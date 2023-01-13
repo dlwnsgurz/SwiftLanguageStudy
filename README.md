@@ -151,3 +151,13 @@
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Nested%20Types.swift">Nested Types</a>
 - Nested Types in Action
 - Referring to Nested Types
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Extensions.swift">Extensions</a>
+- Extension Syntax
+- Computed Properties
+- Initializers
+- Methods
+- Subscripts
+- Nested Types
+
+
