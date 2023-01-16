@@ -159,6 +159,7 @@
 - Methods
 - Subscripts
 - Nested Types
+---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Protocols.swift">Protocols</a>
 - Protocol Syntax
 - Property Requirements
@@ -176,4 +177,18 @@
 - Checking for Protocol Conformance
 - Optional Protocol Requirements
 - Protocol Extensions
-
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Generics.swift">Generics</a>
+- The Problem That Generics Solve
+- Generic Functions
+- Type Parameters
+- Naming Type Parameters
+- Generic Types
+- Extending a Generic Type
+- Type Constraints
+- Associated Types
+- Generic Where Clauses
+- Extensions with a Generic Where Clause
+- Contextual Where Clauses
+- Associated Types with a Generic Where Clause
+- Generic Subscripts
