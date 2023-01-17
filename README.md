@@ -192,3 +192,12 @@
 - Contextual Where Clauses
 - Associated Types with a Generic Where Clause
 - Generic Subscripts
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Automatic%20Reference%20Counting.swift">Automatic Reference Counting</a>
+- How ARC Works
+- ARC in Action
+- Strong Reference Cycles Between Class Instances
+- Resolving Strong Reference Cycles Between Class Instances
+- Strong Reference Cycles for Closures
+- Resolving Strong Reference Cycles for Closures
+
