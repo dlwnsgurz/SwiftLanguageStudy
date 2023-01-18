@@ -16,9 +16,9 @@
 - Optionals
 - Error Handling
 ---
-## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Basic%20Operator.swift">Basic Operator</a>
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Basic%20Operator.swift">Basic Operators</a>
 - Terminology
-- Assign Operator
+- Assignment Operator
 - Arithmetic Operators
 - Compound Assignment Operators
 - Comparison Operators
