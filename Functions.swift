@@ -10,11 +10,10 @@ import Foundation
 // - Topic: Functions
 
 /// 스위프트에서 함수는 몇 가지 기능을 제공한다.
-/// 첫번쨰는 레이블 이름이다. 함수를 호출하는 시점에 명시할 수 있도록 되어있으므로 가독성이 좋다.
-/// 두번째는 디폴트 값을 제공하기때문에 함수를 간편하게 호출할 수 있다.
+/// 첫번째는 레이블 이름이다. 함수를 호출하는 시점에 명시할 수 있도록 되어있으므로 가독성이 좋다.
+/// 두번째는 디폴트 값을 제공하기때문에 함수를 간편하게 정의하고, 호출할 수 있다.
 
 /// - Defining and Calling Fuctions
-
 /// func 키워드를 통해 함수를 정의할 수 있다.
 /// -> 키워드로 함수의 return 타입을 정의할 수 있다.
 func greet(person: String) -> String {
@@ -26,7 +25,6 @@ print(\(greeting("Anna"))) // Hello, Anna!
 /*------------------------------------------*/
 
 /// - Fuction Parameters and Return Values
-
 /// 매개변수가 없는 함수를 정의할 수 있다.
 /// 호출또한 매개변수 없이 호출한다.
 func sayHelloWorld() -> String {
@@ -35,7 +33,7 @@ func sayHelloWorld() -> String {
 
 print(sayHelloWorld())
 
-/// 매개변수가 여러개인 함수를 정의할 수 있다.
+/// 매개변수가 여러 개인 함수를 정의할 수 있다.
 func greet(person: String, alreadyGreeted: Bool) -> String {
     if alreadyGreeted {
         return // greetAgain(person: person)
@@ -80,8 +78,7 @@ print("min value is \(bound.min), max value is \(bound.max)")
 
 /// 또한 옵셔널 튜플을 리턴할 수 있다.
 /// 괄호밖에 ?를 붙이면 된다. ex) (Int, Int)? (String, Int, Int)?
-/// 옵셔널 튜플타입은 튜플 내의 옵셔널이 있는 것과는 다르다 . vs (Int?, Int?)
-
+/// 옵셔널 튜플타입은 튜플 내의 옵셔널이 있는 것과는 다르다. vs (Int?, Int?)
 func minMax(array: [Int]) -> (min: Int, max: Int)?{
     if array.isEmpty{
         return nil
@@ -98,7 +95,7 @@ func minMax(array: [Int]) -> (min: Int, max: Int)?{
     return (currentMin, currentMax)
 }
 
-/// 또한 함수내의 return이 하나밖에 없다면, return 키워드를 생략할 수 있다.
+/// 또한 함수 내의 실행문이 한 줄로 표현할 수 있다면, return 키워드를 생략할 수 있다.
 /// 아래 두 함수는 완전 동일한 역할을 한다.
 func greeting(person: String) -> String{
     return "Hello, \(person)!"
@@ -110,9 +107,8 @@ func greetingAnother(person: String) -> String {
 
 /*------------------------------------------*/
 
-/// - Fuction Argument Labels and Parameters Names
+/// - Fuction Argument Labels and Parameter Names
 /// 함수 매개변수의 이름은 유일해야 하며, 인자 레이블은 호출시에 가독성을 높힐 수 있다.
-
 func someFuction(firstParameterName: Int, secondParameterName: Int){
     
 }
@@ -127,8 +123,8 @@ func someFuction(_ parameter: Int){
 }
 someFuction(3)
 
-/// 매개변수에 기본값을 지정할 수 있다.
-/// 기본값이 지정되지 않은 매개변수는 반드시 앞에 와야한다.
+/// 매개변수에 기본 값을 지정할 수 있다.
+/// 기본 값이 지정되지 않은 매개변수가 반드시 앞에 와야한다.
 func someFuction1(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
         
 }
@@ -137,11 +133,11 @@ someFuction1(parameterWithoutDefault: 3)    //  3, 12
 someFuction1(parameterWithoutDefault: 3, parameterWithDefault: 4)   // 3, 4
 
 
-/// 가변 매개변수 또한 인자삼는 함수를 정의할 수 있다.
-/// 가변 매개변수는 함수 내부에서 Array처럼 다루어진다.
+/// 가변 매개변수를 매개변수로 삼는 함수를 정의할 수 있다.
+/// 가변 매개변수는 0개 이상의 원소가 전달되어야 한다.
+/// 가변 매개변수는 함수 내부에서 상수 배열처럼 다루어진다.
 /// 아래의 경우 number는 [Double]형 상수로 취급된다.
 /// 가변 매개 변수뒤에 첫번째 매개변수는 반드시 인자레이블이 있어야한다.
-
 func arithmeticMean(_ numbers: Double...) -> Double{
     var total: Double = 0
     for number in numbers{
@@ -154,6 +150,7 @@ func arithmeticMean(_ numbers: Double...) -> Double{
 /// 만약 이러한 연산을 수행하고 싶다면, inout 키워드를 이용하면 된다.
 /// 상수나 리터럴은 inout 매개변수에 들어올 수 없고 오직 변수만 들어올 수 있다.
 /// 매개변수의 타입 앞에 inout 키워드를 붙인다. 가변 매개변수에는 사용 불가능하다.
+/// 또한 inout 매개변수는 기본 값을 가질 수 없다.
 /// 호출하는 시점에는 인자앞에 &를 붙여 값이 변함을 명시한다.
 func swapTwoInts(_ a: inout Int, _ b: inout Int){
     var temp = a
@@ -168,7 +165,6 @@ swapTwoInts(&someInts1, &someInts2)
 /*------------------------------------------*/
 
 /// - Fuction Types
-///
 /// 모든 함수는 타입을 갖는다.
 /// 함수의 타입은 매개변수의 타입, 리턴 타입으로 표현된다
 /// 예를 들어 다음 2개의 함수는 모두 (Int, Int) -> Int 타입을 가진다.
@@ -233,8 +229,8 @@ print("zero!")
 
 /*------------------------------------------*/
 
-/// - Nested Fuction
-/// 함수내의 함수가 정의 가능하다.
+/// - Nested Functions
+/// 함수 내의 함수가 정의 가능하다.
 func chooseStepFuction(backword: Bool) -> (Int) -> Int{
     func stepForword(_ input: Int) ->Int{ input + 1}
     func stepBackword(_ input: Int) ->Int{ input - 1}
