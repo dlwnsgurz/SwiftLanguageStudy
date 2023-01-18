@@ -200,4 +200,9 @@
 - Resolving Strong Reference Cycles Between Class Instances
 - Strong Reference Cycles for Closures
 - Resolving Strong Reference Cycles for Closures
-
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Memory%20Safety.swift">Memory Safety</a>
+- Understanding Conflicting Access to Memory
+- Conflicting Access to In-Out Parameters
+- Conflicting Access to self in Methods
+- Conflicting Access to Properties
