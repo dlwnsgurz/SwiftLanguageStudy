@@ -1,24 +1,21 @@
-class HTMLElement {
+struct Player {
+    var name: String
+    var health: Int
+    var energy: Int
 
-    let name: String
-    let text: String?
-
-    lazy var asHTML: () -> String = {
-        [unowned self] in
-        if let text = self.text {
-            return "<\(self.name)>\(text)</\(self.name)>"
-        } else {
-            return "<\(self.name) />"
-        }
+    let maxHealth = 10
+    mutating func restoreHealth() {
+        health = maxHealth
     }
-
-    init(name: String, text: String? = nil) {
-        self.name = name
-        self.text = text
-    }
-
-    deinit {
-        print("\(name) is being deinitialized")
-    }
-
 }
+
+extension Player {
+    mutating func shareHealth(with teammate: inout Player) {
+        balance(&teammate.health, &health)
+    }
+}
+
+var oscar = Player(name: "Oscar", health: 10, energy: 10)
+var maria = Player(name: "Maria", health: 5, energy: 10)
+oscar.shareHealth(with: &maria)  // OK
+
