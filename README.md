@@ -8,12 +8,12 @@
 - Integers
 - Floating-Point Numbers
 - Type Safety and Type Inference
-- Numeric Literal
+- Numeric Literals
 - Numeric Type Conversion
-- Type Alias
+- Type Aliases
 - Booleans
 - Tuples
-- Optional
+- Optionals
 - Error Handling
 ---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Basic%20Operator.swift">Basic Operator</a>
