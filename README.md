@@ -43,9 +43,11 @@
 - Unicode Representations of Strings
 ---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Collection%20Types.swift">Collection Types</a>
-- Array
-- Set
-- Dictionary
+- Mutability of Collections
+- Arrays
+- Sets
+- Performing Set Operations
+- Dictionaries
 ---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Control%20Flow.swift">Control Flow</a>
 - For-In Loops
