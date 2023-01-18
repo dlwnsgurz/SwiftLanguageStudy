@@ -9,9 +9,8 @@ import Foundation
 
 // - Topic: Control Flow
 
-/// - For-in Loops
-/// for-in 루프로 Array의 iterate가 가능하다.
-
+/// - For-In Loops
+/// 배열의 아이템, 범위의 숫자, 문자열의 문자와 같이 연속된 것에 for-in 루프로 순회가 가능하다.
 let names = ["Anna", "Alex", "Brian", "Jack"]
 for name in names {
     print("Hello, \(name)!")
@@ -21,9 +20,8 @@ for name in names {
 // Hello, Brian!
 // Hello, Jack!x
 
-/// 또한 Dictionary에서는 (key,value) 쌍을 for-loop로 iterate가 가능하다.
-/// 이때 (key,value) 는 상수로, 변경이 불가능하다.
-
+/// 또한 Dictionary에서는 (key,value) 쌍을 for-in 루프로 iterate가 가능하다.
+/// 이 때 (key, value)는 상수로, 변경이 불가능하다.
 let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
 for (animalName, legCount) in numberOfLegs {
     print("\(animalName)s have \(legCount) legs")
@@ -32,13 +30,13 @@ for (animalName, legCount) in numberOfLegs {
 // ants have 6 legs
 // spiders have 8 legs
 
-/// numeric range 또한 for-loop에서 사용할 수 있다.
-/// 이때 index 는 상수이다. (값의 변경이 불가능하다.)
+/// 숫자 범위 또한 for-in 루프에서 사용할 수 있다.
+/// 이 때 index는 상수이다. (값의 변경이 불가능하다.)
 for index in 1...5{
     print("index is \(index)")
 }
 
-/// 만약 for-loop 내에 값이 필요없다면, 언더스코어(_)를 사용할 수 있다.
+/// 만약 for-in 루프내에 값이 필요없다면, 언더스코어(_)를 사용할 수 있다.
 /// 이는 코드를 읽는 사람에게 반복문 내의 값이 필요하지 않다는 메시지를 줄 수 있으므로,
 /// 반복문 내의 값이 필요없다면 이용하도록 하자.
 let base = 1
@@ -48,19 +46,19 @@ for _ in 1...end{
     base *= power
 }
 
-/// 당연히, for-loop에서는 반닫힌 range도 가능하다.
+/// 당연히, for-in 루프에서는 반열린 범위도 가능하다.
 let minutes = 60
 for tickMark in 0..<minutes{
     //
 }
 
-/// stride(from: to: by:) 함수를 이용해 간격있는 range를 생성할 수 있다.
+/// stride(from: to: by:) 함수를 이용해 간격 있는 범위를 생성할 수 있다.
 let minuteInterval = 5
 for tickMark in stride(from: 0, to: minutes, by: minuteInterval){
     ///
 } // (0,5,10.......50,55)
 
-/// stride(from: through: by:) 함수를 이용해 끝 값까지 포함하는 range를 생성할 수 있다.
+/// stride(from: through: by:) 함수를 이용해 끝 값까지 포함하는 범위를 생성할 수도 있다.
 let finalNumber = 12
 let firstNumber = 3
 let numberInterval
@@ -71,15 +69,15 @@ for index in stride(from: first, through: finalNumber, by: numberInterval){
 /*------------------------------------------*/
 
 /// - While Loops
-/// While 루프는 반복횟수가 정해진 for-loop와 다르게, 얼마나 반복할지 모를 때 사용하는 것이 바람직하다.
-/// while은 조건을 검사하고, 조건이 참이면 반복하며 조건이 거짓이면 반복문을 빠져나온다.
+/// While 루프는 반복 횟수가 정해진 for-in 루프와 다르게, 얼마나 반복할지 모를 때 사용하는 것이 바람직하다.
+/// while은 조건을 검사하고, 조건이 참이면 반복을 유지하고 조건이 거짓이면 반복문을 빠져나온다.
 /// repeat - while문은 우선 statement를 실행하고, 조건이 참이면 또 실행하며 조건이 거짓인 경우에는 반복문을 빠져나온다.
 
 /*------------------------------------------*/
 
 /// - Conditional Statements
 /// 스위프트에는 2가지 조건문이 존재한다.
-/// if문과 switch문으로, switch문은 주로 if문보다 더 복잡한 경우의 분기가 필요할 때 사용한다.
+/// if문과 switch문으로, switch문은 주로 if문보다 더 복잡한 경우의 분기가 필요할 때, 패턴화가 필요할 때사용한다.
 var temperatureInFahrenheit = 30
 if temperatureInFahrenheit <= 32 {
     print("It's very cold. Consider wearing a scarf.")
@@ -87,9 +85,8 @@ if temperatureInFahrenheit <= 32 {
 // Prints "It's very cold. Consider wearing a scarf."
 
 /// switch 문은 말그대로 switch이다.
-/// case로 분기하여 실행하고, 만약 case에 포함되지 않은 값이라면 defalut문으로 분기한다.
+/// case로 분기하여 실행하고, 만약 case에 포함되지 않은 값이라면 default 문으로 분기한다.
 /// 따라서 가능한 모든 경우를 case로 분기시켜야하며, 그럴 수 없다면 반드시 마지막에 default case로 분기할 수 있도록 해야한다.
-
 let someCharacter : Character = "a"
 switch someCharacter{
 case "a":
@@ -105,7 +102,6 @@ default:
 
 /// 만약 case 조건을 2개 이상으로 합치고 싶다면 ,를 이용하면된다.
 /// 만약 case내의 statement가 없다면, 컴파일 에러가 발생한다.
-
 switch someCharacter{
 case "a":
 case "A":
@@ -121,7 +117,7 @@ default:
     print("")
 }
 
-/// 스위프트 스위치문의 case에는 간격이 올 수도 있다.
+/// 스위프트 스위치문의 case에는 범위가 올 수도 있다.
 let approximateCount = 62
 let countedThings = "moons orbiting Saturn"
 let naturalCount: String
@@ -142,9 +138,8 @@ default:
 print("There are \(naturalCount) \(countedThings).")
 // Prints "There are dozens of moons orbiting Saturn."
 
-/// 스위치 문에서도 tuple을 사용할 수 있다.
-/// 또한 간격이 올 수도 있다.
-
+/// 스위치 문에서도 튜플을 사용할 수 있다.
+/// 또한 case에 범위가 올 수도 있다.
 let somePoint = (1, 1)
 switch somePoint {
 case (0, 0):
@@ -161,9 +156,9 @@ default:
 // Prints "(1, 1) is inside the box"
 
 /// 스위프트의 스위치문에는 값 바인딩을 사용할 수 있다.
-/// 해당 값을 변수나, 상수로써 사용할 수 있기때문이다.
+/// 해당 값을 변수나, 상수로써 case 분기문 내에서 사용할 수 있다.
 /// var로 선언한 경우 원본의 값은 변하지 않는다.
-/// 아래의 경우에는 default가 필요없는데 이는 맨아래 case문이 모든 경우를 포함하고 있기 때문이다.
+/// 아래의 경우에는 default가 필요없는데 이는 맨 아래 case가 모든 경우를 포함하고 있기 때문이다.
 let anotherPoint = (2, 0)
 switch anotherPoint {
 case (let x, 0):
@@ -189,7 +184,7 @@ case let (x, y):
 
 /// 또한 case를 ,로 묶은 경우에도 값 바인딩을 사용할 수 있다
 /// 이 경우에는 몇 가지 주의할 점이 있다.
-/// 첫번쨰. 묶은 조건들은 같은 이름의 변수나 상수를 가져야한다.
+/// 첫번째, 묶은 조건들은 같은 이름의 변수나 상수를 가져야한다.
 /// 두번째, 묶인 조건들의 바인딩 된 값들은 같은 타입을 가져야한다.
 /// 이렇게 함으로써 body내에서는 항상 바인딩 된 값에 접근할 수 있다.
 let stillAnotherPoint = (9, 0)
@@ -297,8 +292,6 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 /// 스위프트는 Checking API Availability 기능을 제공한다.
 /// 만약 SDK에서 사용할 수 없는 내장 API를 사용한다면 스위프트는 컴파일 오류를 발생시킨다.
 /// if문이나 guard문을 통해 사용할 수 있는 API인지 검사할 수 있다.
-
-
 /// *은 필수로 붙여야하며, 아래 조건문은 iOS 10버전이상, macOS 10.12 버전 이상에서 사용가능하다는 뜻이다.
 if #available(iOS 10, macOS 10.12, *) {
     // Use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
@@ -307,7 +300,7 @@ if #available(iOS 10, macOS 10.12, *) {
 }
 
 /// 또한 unavailable문으로 처리할 수 있다.
-/// 아래의 코드는 동일한 동작을 한다.
+/// 아래의 두 코드는 동일한 동작을 한다.
 if #available(iOS 10, *) {
 } else {
     // Fallback code
