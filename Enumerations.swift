@@ -16,7 +16,6 @@ import Foundation
 /// - Enumertion Syntax
 /// 열거형은 enum 키워드를 이용해 정의할 수 있다.
 /// C의 경우, 각각의 케이스는 0,1,2.. 의 값을 가지지만 스위프트는 그렇지 않다.
-///
 enum Compass{
     case north
     case east
