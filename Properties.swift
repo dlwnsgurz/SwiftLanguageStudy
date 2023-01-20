@@ -26,15 +26,17 @@ somePage.startPage = 4 // 4,5,6
 let somePage2 = FixedLengthRange(startPage: 2, length: 4) // 2,3,4,5
 // 구조체는 값타입이기 떄문에 인스턴스를 let으로 선언하면 가변 저장 프로퍼티라도 값의 변경이 불가능하다.
 
-
 /// 지연 저장 프로퍼티는 lazy 키워드를 통해 선언할 수 있다.
-/// 지연 저장 프로퍼티는 let아닌 var로 선언해야 하는데 이는 지연저장 프로퍼티는 값을 항상 갖고 있지 않고 최초 접근시에만 값이 생성되기 때문이다.
+/// 지연 저장 프로퍼티는 let아닌 var로 선언해야 하는데 이는 지연 저장 프로퍼티는 값을 항상 갖고 있지 않고 최초 접근시에만 값이 생성되기 때문이다.
 /// 따라서 복잡한 작업이 필요한 경우 지연 저장 프로퍼티를 이용해 시간을 줄일 수 있다.
+/// 아래의 DataManager 인스턴스는 파일을 내용을 다루는 클래스이다.
+/// DataImporter 인스턴스는 어느 파일에 접근해 파일의 내용을 불러오는 클래스이다.
+/// DataManager 인스턴스를 통해 기존 파일의 내용을 다룰 수 있지만, 필요에 의해 DataImporter 인스턴스를 이용헤,
+/// 새로운 파일에 접근해야할 때도 있다. 하지만 이 과정이 오래걸리므로, 지연 저장 프로퍼티로 선언해 효율성을 높힌다.
 class DataImporter{
     // 이 클래스를 초기화하는데 매우 많은 시간이 소요된다고 하자.
     var fileName = "file.txt"
 }
-
 
 class DataManager{
     lazy var dataImporter = DataImporter()
@@ -50,8 +52,8 @@ print(dataManager.dataImporter.fileName) // DataManager에 dataImporter가 초�
 /*------------------------------------------*/
 
 /// - Computed Properties
-/// 저장 프로퍼티는 실제 값을 저장하지 않고 연산을 통해 return 해준다.
-/// 모든 저장 프로퍼티는 반드시 var로 선언해야 한다.
+/// 연산 프로퍼티는 실제 값을 저장하지 않고 연산을 통해 return 해준다.
+/// 모든 연산 프로퍼티는 반드시 var로 선언해야 한다.
 /// getter와, 옵션에따라 setter를 설정할 수 있다.
 /// 클래스, 구조체, 열거형에서 사용할 수 있다.
 struct Point{
@@ -82,8 +84,7 @@ let initialSquareValue = square.center // 15.0, 15.0
 
 square.center = Point(x:15, y:15) // 10.0, 10.0
 
-/// 스위프트에서 계산 프로퍼티의 setter에 인자를 전달하지 않았다면, 자동으로 newValue이름이 할당되어 접근할 수 있는 Shorthand Form을 제공한다.
-
+/// 스위프트에서 연산 프로퍼티의 setter에 인자를 전달하지 않았다면, 자동으로 newValue 이름이 바인딩 되어 접근할 수 있는 Shorthand Form을 제공한다.
 struct AlternativeRect{
     var origin = Point()
     var size = Size()
@@ -99,7 +100,7 @@ struct AlternativeRect{
     }
 }
 
-/// 전에 말햇듯이 return문까지 한 문장으로 작성한다면, return을 생략할 수 이싿.
+/// 전에 말햇듯이 return문까지 한 문장으로 작성할 수 있다면, return 키워드를 생략할 수 있다.
 struct CompactRect{
     var origin = Point()
     var size = Size()
@@ -113,8 +114,8 @@ struct CompactRect{
     }
 }
 
-/// 읽기 전용 계산 프로퍼티또한 가능하다.
-/// 반드시 var키워드를 통해 선언해야한다.
+/// 읽기 전용 연산 프로퍼티를 정의할 수 있다.
+/// setter를 설정하지 않으면, 자동으로 읽기 전용 연산 프로퍼티가 된다.
 /// volumn의 경우 가로, 세로, 높이에 종속적이다. 따라서 읽기 전용으로 선언하여 임의로 값의 변경이 불가능하다.
 struct Cuboid{
     var height = 0.0, width = 0.0, depth = 0.0
@@ -127,14 +128,13 @@ struct Cuboid{
 
 /// - Property Observers
 /// 프로퍼티 옵저버는 프로퍼티의 값의 변화를 살필 수 있다.
-/// 값의 변화를 관찰하는 것이 목적이기 때문에, 연산 프로퍼티에는 사용이 불가능하다. 왜냐하면 연산프로퍼티는 set에서 관찰할 수 있기때문이다.
+/// 값의 변화를 관찰하는 것이 목적이기 때문에, 연산 프로퍼티에는 사용이 불가능하다. 왜냐하면 연산 프로퍼티는 set에서 관찰할 수 있기때문이다.
 /// 만약 동일한 값으로 변경이 된다고 해도 프로퍼티 옵저버는 이를 관찰한다.
 /// wiiSet, didSet으로 저장 프로퍼티에 프로퍼티 옵저버를 붙힐 수 있다.
-/// willSet은 값이 변화하기 직전에 호출되며, 상수 인자를 전달할 수 있으며, 전달하지 않은 경우에는 자동으로 newValue이름이 붙는다.
-/// didSet은 값이 변화하고난 직후에 호출되며, 상수 인자를 전달할 수 있으며, 전달하지 않은 경우에는 자동으로 oldValue이름이 붙는다.
-/// 상속받은 저장 프로퍼티에도 옵저버를 붙힐 수 있으며, 만약 상속 받은 연산프로퍼티라면 옵저버를 붙힐 수 있다.
+/// willSet은 값이 변화하기 직전에 호출되며, 상수 인자가 전달되며, 전달하지 않은 경우에는 자동으로 newValue 이름으로 바인딩 된다.
+/// didSet은 값이 변화한 직후에 호출되며, 상수 인자가 전달되며,  전달하지 않은 경우에는 자동으로 oldValue 이름으로 바인딩 된다.
+/// 상속받은 저장 프로퍼티에도 옵저버를 붙힐 수 있으며, 만약 상속 받은 연산 프로퍼티라면 옵저버를 붙힐 수 있다.
 /// - Note: 부모 클래스에 붙어있는 프로퍼티 옵저버는 부모 클래스의 초기화가 이루어진 후 값의 변화를 살필 수 있다.
-
 class StepCounter{
     var totalStep: Int = 0{
         willSet{
@@ -164,8 +164,7 @@ stepCounter.totalStep = 360
 
 /// - Property Wrappers
 /// 프로퍼티 래퍼는 프로퍼티를 감싼다는 의미이다.
-/// 이는 여러 프로프티에 대해 중복된 연산이 필요한 경우, 유용하게 사용될 수 있다.
-
+/// 이는 여러 프로퍼티에 대해 중복된 연산이 필요한 경우, 유용하게 사용될 수 있다.
 @propertyWrapper
 struct TwelveOrLess{
     var number: Int = 0
@@ -202,7 +201,6 @@ smallRectagle.height = 14 // 12
 
 /// 위의 프로퍼티 래퍼의 경우 인스턴스를 생성할 때 값이 항상 0으로 초기화된다.
 /// 따라서, 프로퍼티 래퍼에서 생성자를 정의해 이를 해결할 수 있다.
-
 @propertyWrapper
 struct SmallNumber{
     var number: Int
@@ -244,18 +242,18 @@ struct NarrowRectangle {
  
 /// - Global and Local Variables
 /// 프로퍼티감시자(willSet,didSet)나 연산 프로퍼티의 경우 지역변수나 전역변수 모두에서 사용할 수 있다.
-/// 하지만, 프로퍼티 래퍼의 경우, 지역변수나 연산 변수에 사용할 수 없다.
+/// 하지만, 프로퍼티 래퍼의 경우, 전역변수나 연산 변수에 사용할 수 없다.
 /// 지역 상수와 지역 변수는 지연 저장 되지 않지만, 전역 상수나 변수는 지연 저장된다.
 
 /*------------------------------------------*/
 
 /// - Type Properties
 /// 타입 프로퍼티는 타입에 종속된 프로퍼티이다.
-/// 인스턴스가 몇개가 있는 타입 프로퍼티는 하나만 존재한다.
-/// 타입 저장 프로파티느 지연 저장 기능이 있기때문에 최초 접근시에 초기화된다.
+/// 인스턴스가 몇개가 있던간에 타입 프로퍼티는 하나만 존재한다.
+/// 타입 프로퍼티는 반드시 기본 값이 주어져야한다.
+/// 타입 저장 프로퍼티는 지연 저장 기능이 있기때문에 최초 접근시에 초기화된다.
 /// 또한, 여러 쓰레드에서 동시에 접근해도 초기화가 단 한번된다.
 /// 타입 저장 프로퍼티는 열거형에서도 사용 가능하다.
-
 struct SomeStructure{
     var structTypeProperty = "구조체 타입 저장 프로퍼티"
     var structTypeComputedProperty : Int{
