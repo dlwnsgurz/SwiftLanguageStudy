@@ -100,6 +100,7 @@
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Subscripts.swift">Subscripts</a>
 - Subscript Syntax
 - Subscript Usage
+- Subscript Options
 - Type Subscripts
 ---
 ## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Inheritance.swift">Inheritance</a>
