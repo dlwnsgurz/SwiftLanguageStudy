@@ -9,19 +9,21 @@ import Foundation
 
 // - Topic: Error Handling
 
-/// 스위프트는 에러 처리를 위해 다양한 기능을 제공하며, 이는 NSError와 호응한다.
+/// 스위프트는 에러 처리를 위해 다양한 기능을 제공하며, 이는 Cocoa와 ObjectiveC의 NSError와 호응한다.
 /// 옵서녈로 nil을 이용해 오류를 처리할 수 있지만, 에러가 발생한 이유와 그 에러에 대응하는 행동을
 /// 정의하기 쉽도록 스위프트는 에러 핸들링을 제공한다.
 
 /// - Representing and Throwing Errors
-/// 스위프트에서 에러는 Error 프로토콜을 따르는 타입의 값으로 표현되며 열거형이 사용된다.
-/// 에러를 발생시키기 위해 throw 구문을 사용할 수 있다.
+/// 스위프트에서 에러는 Error 프로토콜을 따르는 타입의 값으로 표현되며 된다.
+/// Error 프로토콜은 에러를 처리하는 것에 사용될 수 있다.
+/// 특히, 열거형은 발생가능한 에러들을 그룹화하는데 유용하며, 연관 값을 통해 에러에 대한 추가정보를 제공할 수 있다.
 enum VendingMachineError: Error{
     case invaildSelection
-    case inSufficientFund(coinsNeeded: Int)
+    case inSufficientFund(asd coinsNeeded: Int)
     case outOfStock
 }
 
+/// throw 키워드를 통해 에러를 발생시킬 수 있다.
 throw VendingMachineError.inSufficientFund(coinsNeeded: 5) // 코인이 5개 부족한 에러 발생.
 
 /*------------------------------------------*/
@@ -30,13 +32,17 @@ throw VendingMachineError.inSufficientFund(coinsNeeded: 5) // 코인이 5개 부
 /// 스위프트에서 에러 처리는 다른 언어처럼 콜 스택 되돌리기(unwinding)와 관련이 없다.
 /// 따라서, 일반 함수의 return문과 비슷한 퍼포먼스를 보여준다.
 /// 스위프트에서 에러 처리는 4가지 방법이 있다.
-/// 1. 에러를 리턴하는 함수 정의해, 함수를 호출한 곳에서 에러 처리를 하는 법
+/// 1. 에러를 리턴하는 함수를 정의해, 함수를 호출한 곳에서 에러 처리를 하는 법
 /// 2. do - catch 구문
 /// 3. 옵셔널 값을 반환
 /// 4. assert()를 통해 강제 크래쉬 발생
 
 /// 1. 에러를 리턴하는 함수를 통한 에러 핸들링
+/// 함수, 메서드, 초기화구문을 에러를 리턴할 수 있도록 정의할 수 있다.
 /// throws 키워드를 통해 정의하며, 이러한 함수를 throwing 함수라고 한다.
+/// 에러를 던지는 함수, 메서드, 초기화구문의 경우 단순히 에러를 전파하는 역할을 하므로, 에러에 대한 처리는
+/// 호출한 코드에서 처리해주어야 한다.
+/// 따라서, try 키워드를 앞에 꼭 붙여주어야 한다.
 func errorThrowingFuction() throws -> String{
     
 }
@@ -86,7 +92,7 @@ let favoriteSnacks = [
     "Bob" : "Licorice",
     "Eve" : "Pretzel"
 ]
-// 에러 함수를 호출하므로, try 키워드를 앞에 붙여야한다.
+/// 에러가 발생할 수 있는 함수를 호출하므로, try 키워드를 앞에 붙여야한다.
 func buyFavoriteSnacks(person: String, vendingMachine: VendingMachine) throws{
     let snackName = favoriteSnacks[person] ?? "Candy Bar"
     try vendingMachine.vend(itemNamed: snackName)
@@ -96,7 +102,7 @@ func buyFavoriteSnacks(person: String, vendingMachine: VendingMachine) throws{
 /// throwing 이니셜라이저도 에러를 던질 수 있다.
 struct PurchasedSnack{
     var name: String
-    init(name: String, vendingMachine: VendingMachine){
+    init(name: String, vendingMachine: VendingMachine) throws {
         try vendingMachine.vend(itemNamed: name)
         self.name = name
     }
@@ -106,9 +112,9 @@ struct PurchasedSnack{
 /// do-catch 문을 통해 catch 키워드 뒤에 어떤 에러인지 명시한다.
 /// 만약, catch 키워드 뒤에 error 패턴 없이 구문을 작성한다면 , error가 지역 상수로 바인딩 된다.
 /// try 문이 에러를 발생시킨다면 즉시 catch문 패턴을 검사하고, 매치된 catch 문이 실행된다.
-/// 만약, 아무 패턴도 catch 문과 매치되지 않았다면, 마지막 catch 문에서 발생한 에러가 error 지역 상수로 바인딩된다.
+/// 만약, 아무 패턴도 catch 문과 매치되지 않았다면, 패턴이 없는 마지막 catch 문에서 발생한 에러가 error 지역 상수로 바인딩된다.
 /// 만약, try 문이 에러를 던지지 않는다면 do 절의 나머지 명령어가 실행된다.
-/// 따라서, 에러가 발생한 곳에 오류는 해결해야 runtime 에러가 발생되지 않는다.
+/// 따라서, 에러가 발생한 곳의 오류를 해결해야 runtime 에러가 발생되지 않는다.
 var vendingMachine = VendingMachine()
 vendingMachine.coinsDeposited = 8
 do{
@@ -171,6 +177,8 @@ do{
 }
 
 /// try? 문은 주로 발생하는 에러를 같은 방식으로 처리하고자 할 때 유용하다.
+/// do-catch 문을 사용하는 것보다, 훨씬 짧고 간결하게 코드 작성이 가능하다.
+/// 옵셔널 바인딩을 통해 에러를 세련되게 처리할 수 있다.
 func fetchData() -> Data?{
     if let data = try? fetchDataFromDisk() { return data }
     if let data = try? fetchDataFromServer() { return data }
