@@ -209,3 +209,13 @@
 - Conflicting Access to In-Out Parameters
 - Conflicting Access to self in Methods
 - Conflicting Access to Properties
+---
+## <a href = "https://github.com/dlwnsgurz/SwiftLanguageStudy/blob/master/Access%20Control.swift">Access Control</a>
+- Access Levels
+- Access Control Syntax
+- Custom Types
+- Subclassing
+- Constants, Variables, Properties, and Subscripts
+- Initializers
+- Protocols
+- Extensions
